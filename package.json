@@ -1,6 +1,7 @@
 {
   "name": "carwash-web-app",
   "version": "0.0.0",
+  "homepage": "https://justinrds2001.github.io/CarwashApplication/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
