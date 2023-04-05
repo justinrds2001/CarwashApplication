@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Select your wash service:</h2>
+  <div class="carousel">
+    <!-- Example carousel with mock data -->
+    <div
+      class="carousel-item"
+      *ngFor="let service of services; let i = index"
+      [ngClass]="{ selected: i === selectedServiceIndex }"
+      (click)="selectService(service)"
+    >
+      <h3>{{ service.name }}</h3>
+      <p>{{ service.description }}</p>
+      <button>Select</button>
+    </div>
+  </div>
+  <h2>Select a date and time:</h2>
+  <div class="calendar">
+    <p>Selected date: {{ selectedDate | date }}</p>
+    <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+    <div *ngIf="selectedDate">
+      <h3>Available timeslots:</h3>
+      <div class="timeslots">
+        <button
+          *ngFor="let time of availableTimeslots"
+          (click)="selectTime(time)"
+          class="btn btn-primary rounded-pill"
+        >
+          {{ time | date : "shortTime" }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

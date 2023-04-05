@@ -1,0 +1,59 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  margin-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.carousel-item {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+.carousel-item p {
+  width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.selected {
+  border: 2px solid #4285f4;
+}
+
+.timeslots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timeslots button {
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.timeslots button:hover {
+  background-color: #3367d6;
+}
